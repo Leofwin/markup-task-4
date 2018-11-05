@@ -21,12 +21,12 @@ main > input[type='checkbox']
     display: none;
 }
 
-header .switch-img
+section .switch-img
 {
     margin: 20px 0 0 20px;
     width: 50px;
     height: 50px;
-    background: url('img/switch-some.png') no-repeat white;
+    background: url('img/switch-some.svg') no-repeat white;
     display: block;
     cursor: pointer;
 }
@@ -39,8 +39,8 @@ article
 
 article > section
 {
-    border: 1px solid grey;
-    float: left;
+    border: 1px solid rgba(128, 128, 128, 1);
+    display: inline-block;
     width: 230px;
     margin: 10px;
 }
@@ -62,13 +62,13 @@ article section img:hover
     opacity: 1;
 }
 
-article section .cat-card
+article section .cat-description
 {
     padding: 0 10px 10px;
     font-family: Verdana, sans-serif;
 }
 
-article section .cat-card h2
+article section .cat-description h2
 {
     font-weight: normal;
     overflow: hidden;
@@ -78,42 +78,42 @@ article section .cat-card h2
     font-size: 20px;
 }
 
-article section .cat-card h2 a
+article section .cat-description h2 a
 {
-    color: #000;
+    color: rgba(0, 0, 0, 1);
     text-decoration: none;
 }
 
-article section .cat-card h2 a:hover
+article section .cat-description h2 a:hover
 {
-    color: chocolate;
+    color: rgba(210, 105, 30, 1);
 }
 
-article section .cat-card .description-full
+article section .cat-description .description-full
 {
     display: none;
 }
 
-article section .cat-card p
+article section .cat-description p
 {
     font-size: 14px;
     margin: 0;
-    color: grey;
+    color: rgba(128, 128, 128, 1);
 }
 
-article section .cat-card p.breed:hover
+article section .cat-description p.breed:hover
 {
-    color: darkorange;
+    color: rgba(255, 140, 0, 1);
 }
 
-article section .cat-card p.status
+article section .cat-description p.status
 {
     margin: 10px 0;
 }
 
-input[name='switch']:checked ~ header .switch-img
+input[name='switch']:checked ~ section .switch-img
 {
-    background-image: url('img/switch-one.png');
+    background-image: url('img/switch-one.svg');
 }
 
 input[name='switch']:checked ~ article > section
@@ -122,7 +122,7 @@ input[name='switch']:checked ~ article > section
     float: none;
     margin: 0;
     border: none;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid rgba(128, 128, 128, 1);
     padding: 20px 20px 30px;
     box-sizing: border-box;
 }
@@ -132,22 +132,22 @@ input[name='switch']:checked ~ article > section:hover
     box-shadow: none;
 }
 
-input[name='switch']:checked ~ article section .cat-card
+input[name='switch']:checked ~ article section .cat-description
 {
     padding-left: 0;
 }
 
-input[name='switch']:checked ~ article section .cat-card h2
+input[name='switch']:checked ~ article section .cat-description h2
 {
     margin: 15px 0;
 }
 
-input[name='switch']:checked ~ article section .cat-card .description-short
+input[name='switch']:checked ~ article .cat-description .description-short
 {
     display: none;
 }
 
-input[name='switch']:checked ~ article section .cat-card .description-full
+input[name='switch']:checked ~ article .cat-description .description-full
 {
     display: block;
 }
